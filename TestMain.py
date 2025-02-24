@@ -4,8 +4,8 @@ from sklearn.naive_bayes import GaussianNB
 
 import TP
 
-path1_t = "/home/paul_pvc/PycharmProjects/pythonProject/TP_IA_L3/Init/Mer"
-path2_t = "/home/paul_pvc/PycharmProjects/pythonProject/TP_IA_L3/Init/Ailleurs"
+path1_t = "./Init/Mer"
+path2_t = "./Init/Ailleurs"
 
 def test_Histogram():
     """On teste sur des images unies pour vérifier que les pixels sont bien notés"""
@@ -23,8 +23,8 @@ def test_resizeImage(i, h, l) :
     assert resized.size == (h, l)
 
 def test_sample():
-    path1 = "/home/paul_pvc/PycharmProjects/pythonProject/TP_IA_L3/Init/Mer"
-    path2 = "/home/paul_pvc/PycharmProjects/pythonProject/TP_IA_L3/Init/Ailleurs"
+    path1 = "./Init/Mer"
+    path2 = "./Init/Ailleurs"
     TP.buildSampleFromPath(path1, path2)
 
 def real_test():
@@ -36,9 +36,9 @@ def real_test():
     print(TP.realError(S_test))
 
 if __name__ == "__main__":
-    image = Image.open("/home/paul_pvc/PycharmProjects/pythonProject/TP_IA_L3/Init/Mer/838s.jpg")
+    #image = Image.open("/home/paul_pvc/PycharmProjects/pythonProject/TP_IA_L3/Init/Mer/838s.jpg")
     test_Histogram()
-    test_resizeImage(image, 1000, 1000)
+    #test_resizeImage(image, 1000, 1000)
     real_test()
 
 
